@@ -1,0 +1,155 @@
+body{
+  background-color: #1a1a1d;
+}
+ 
+header {
+
+  padding-left: 200px;
+  top: 0;
+ 
+  height: 8vh;
+  width: 100vw;
+
+}
+
+.profile-h {
+  position: absolute;
+  top: 2vh;
+  width: 7vh;
+  border-radius: 60%;
+  right: 1vw;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  top: 2vh; 
+  position: relative;
+  
+}
+
+.search-box input[type="text"] {
+  padding: 0.5vh; 
+  margin-right: 1vw; 
+  width: 8vw;
+}
+
+
+.search-box button[type="submit"] {
+  padding: 8px 16px;
+  background-color: #950740;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 5vw;
+  font-size:2vh;
+}
+
+.ad {
+  font-family: 'Russo One', sans-serif;
+  color: #fcfeff;
+  font-size: 2vw;
+}
+
+.menu {
+  display: flex;
+  flex: 0 0 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13vw;
+  height: 100vh;
+  background-color: #6f2232;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 15px;
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.menu ul li a {
+  font-family: 'Caprasimo', cursive;
+  font-family: 'Russo One', sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5vw ;
+
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  main {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+}
+
+.profile-pic {
+  position: absolute;
+  width: 3vw;
+  border-radius: 50%;
+  padding: 2px;
+  right: 15px;
+  background: #ffffff;
+}
+
+.icon {
+  width: 1.6vw;
+  right: 15px;
+  position: absolute;
+}
+
+.pr,
+.add {
+  position: absolute;
+  width: 2.5vw;
+}
+
+.context {
+  color: #950740;
+  padding-top: 20px;
+  display: flex;
+  padding-left: 200px;
+  font-size: 3vw;
+  font-family: 'Caprasimo', cursive;
+  font-family: 'Russo One', sans-serif;
+}
+
+.image-container {
+  padding-left: 12vw;
+  display: flex; 
+}
+
+.image-container img {
+  padding: 12px;
+  width: 27vw; 
+}
