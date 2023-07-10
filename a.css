@@ -1,15 +1,11 @@
-body{
+body {
   background-color: #1a1a1d;
 }
- 
-header {
 
-  padding-left: 200px;
+header {
   top: 0;
- 
   height: 8vh;
   width: 100vw;
-
 }
 
 .profile-h {
@@ -20,30 +16,41 @@ header {
   right: 1vw;
 }
 
-.search-box {
-  display: flex;
-  align-items: center;
-  top: 2vh; 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.search {
+  padding-left: 20px;
+  top: 2vh;
+  width: 50%;
   position: relative;
-  
+  display: flex;
 }
 
-.search-box input[type="text"] {
-  padding: 0.5vh; 
-  margin-right: 1vw; 
-  width: 8vw;
+.searchTerm {
+  width: 30%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
 }
 
+.searchTerm:focus{
+  color: #00B4CC;
+}
 
-.search-box button[type="submit"] {
-  padding: 8px 16px;
-  background-color: #950740;
-  color: white;
-  border: none;
-  border-radius: 4px;
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
   cursor: pointer;
-  width: 5vw;
-  font-size:2vh;
+  font-size: 20px;
 }
 
 .ad {
@@ -52,65 +59,116 @@ header {
   font-size: 2vw;
 }
 
-.menu {
-  display: flex;
-  flex: 0 0 200px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 13vw;
-  height: 100vh;
-  background-color: #6f2232;
-  padding: 10px;
-  box-sizing: border-box;
-}
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 15px;
-}
-.menu ul {
-  list-style-type: none;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+* {
   padding: 0;
   margin: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-.menu ul li {
-  margin-bottom: 10px;
-  padding-top: 20px;
+.sidebar {
+  background-color: #000000;
+  color: #fff;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  left: -200px;
+  transition: left 0.3s ease;
 }
 
-.menu ul li a {
+.sidebar.active {
+  left: 0;
+}
+
+.ad {
+  text-align: center;
+  padding: 20px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li a {
+  display: block;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
   font-family: 'Caprasimo', cursive;
   font-family: 'Russo One', sans-serif;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1.5vw ;
-
+  font-size: 1.5vw;
 }
 
+/* Responsive Styles */
+
 @media screen and (max-width: 768px) {
-  .menu {
-    flex-direction: column;
+  ul li a {
+    font-size: 3vw; /* Adjust the font size to your preference */
+  }
+}
+
+ul li a i {
+  margin-right: 10px;
+}
+
+#check {
+  display: none;
+}
+
+#btn,
+#cancel {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ .sidebar #btn {
+  color: transparent;
+}
+
+#check:checked ~ .sidebar #cancel {
+  color: #fff;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 30%;
+    left: -100%;
+   
   }
 
-  .menu {
-    display: none;
+  .sidebar.active {
+    left: 0;
   }
 
-  .menu-icon {
-    display: block;
+  .ad {
+    padding: 10px 0;
   }
 
-  main {
-    margin-left: 10px;
-    margin-right: 10px;
+  ul li a {
+    padding-left: 0px;
+    padding: 8px;
   }
+}
 
-  input[type="checkbox"]:checked ~ .menu {
-    display: block;
-  }
+section {
+  background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
 }
 
 .profile-pic {
@@ -128,6 +186,16 @@ header {
   position: absolute;
 }
 
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .icon {
+    width: 8%; /* Adjust the width to your preference */
+    right: 10px;
+    position: absolute;
+  }
+}
+
 .pr,
 .add {
   position: absolute;
@@ -135,21 +203,38 @@ header {
 }
 
 .context {
+  padding-left: 20px;
   color: #950740;
-  padding-top: 20px;
   display: flex;
-  padding-left: 200px;
   font-size: 3vw;
   font-family: 'Caprasimo', cursive;
   font-family: 'Russo One', sans-serif;
 }
 
-.image-container {
-  padding-left: 12vw;
-  display: flex; 
-}
+/* Responsive Styles */
 
-.image-container img {
-  padding: 12px;
-  width: 27vw; 
+@media screen and (max-width: 768px) {
+  section {
+    height: auto;
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 10%;
+    right: 10px;
+  }
+
+  .icon {
+    width: 5%;
+    right: 10px;
+  }
+
+  .pr,
+  .add {
+    width: 8%;
+  }
+
+  .context {
+    font-size: 6vw;
+  }
 }
