@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="a.css">
-  <script src="a.js"></script>
+  <meta charset="UTF-8" />
+  <title>Attendance Dashboard | By Code Info</title>
+  <link rel="stylesheet" href="view/a.css" />
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
@@ -16,43 +17,281 @@
 
 <body>
 
-  <header>
-    <div class="wrap">
-      <div class="search">
-        <input type="text" class="searchTerm" placeholder="search">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-        </button>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+            <img src="view/img/admin.png">
+            <span class="ad">Admin</span>
+          </a></li>
+        <li><a href="#">
+
+            <span class="nav-item">Dashboard</span>
+          </a></li>
+        <li><a href="#">
+
+            <span class="nav-item">Analyatics</span>
+          </a></li>
+        <li><a href="#">
+
+            <span class="nav-item">products</span>
+          </a></li>
+        <li><a href="#">
+
+            <span class="nav-item">Team</span>
+          </a></li>
+        <li><a href="#">
+
+            <span class="nav-item">Setting</span>
+          </a></li>
+
+        <li><a href="#" class="logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="nav-item">Log out</span>
+          </a></li>
+      </ul>
+    </nav>
+
+
+
+    <section class="main">
+      <div class="ana">
+        <div class="analytics-card">
+          <h2>sales</h2>
+          <p class="metric">55389</p>
+          <p class="description">Total Sales</p>
+        </div>
+
+        <div class="analytics-card">
+          <h2>In-Transit</h2>
+          <p class="metric">2646</p>
+          <p class="description">Total In-transit</p>
+        </div>
+
+        <div class="analytics-card">
+          <h2>Ready-To-Ship</h2>
+          <p class="metric">3567</p>
+          <p class="description">Packed</p>
+        </div>
       </div>
-    </div>
-    <div><img class="profile-h" src="img/p.jpg" alt=""></div>
+      <div class="main-top">
+        <h1>Product
+          <button class="n" onclick="">New +</button>
+        </h1>
 
-  </header>
+      </div>
 
-  <input type="checkbox" id="check">
-  <label for="check">
-    <i class="fas fa-bars" id="btn"></i>
-    <i class="fas fa-times" id="cancel"></i>
-  </label>
-  <div class="sidebar">
-    <h1 class="ad">Admin</h1>
-    <ul>
-      <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-      <li><a href="#"><i class="fas fa-link"></i>Products<img class="icon" src="img/pr.svg" ></a></li>
-      <li><a href="#"><i class="fas fa-stream"></i>Team</a></li>
-    </ul>
+      <div class="users">
+        <div class="card">
+          <img src="/view/img/dunk low.svg">
+          <h4>Dunk low</h4>
+          <p>$159</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>106</span></td>
+              </tr>
+              <tr>
+                <td>Stock</td>
+              </tr>
+            </table>
+          </div>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <img src="/view/img/jordan2.webp">
+          <h4>Jordan 2 retro</h4>
+          <p>$299</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>58</span></td>
+              </tr>
+              <tr>
+                <td>Stock</td>
+              </tr>
+            </table>
+          </div>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <img src="/view/img/Yeeze boost.svg">
+          <h4>Yeeze boost</h4>
+          <p>$129</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>72</span></td>
+              </tr>
+              <tr>
+                <td>Stock</td>
+              </tr>
+            </table>
+          </div>
+          <button>View</button>
+        </div>
+
+        <div class="card">
+          <img src="/view/img/Jordan3.svg">
+          <h4>Air jordan 3</h4>
+          <p>$499</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>29</span></td>
+
+              </tr>
+              <tr>
+                <td>Stock</td>
+              </tr>
+            </table>
+          </div>
+          <button>Profile</button>
+        </div>
+      </div>
+
+
+
+      <div class="users">
+        <div class="card">
+          <img src="/view/img/dunk low retro.svg">
+          <h4>Dunk Low Retro</h4>
+          <p>$159</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>106</span></td>
+              </tr>
+              <tr>
+                <td>Stock</td>
+              </tr>
+            </table>
+          </div>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <img src="/view/img/BW.svg">
+          <h4>Dunk Low B&W</h4>
+          <p>$299</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>58</span></td>
+              </tr>
+              <tr>
+                <td>Stock</td>
+              </tr>
+            </table>
+          </div>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <img src="/view/img/jordan1.svg">
+          <h4>Jordan 1 </h4>
+          <p>$129</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>72</span></td>
+              </tr>
+              <tr>
+                <td>Stock</td>
+              </tr>
+            </table>
+          </div>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <img src="/view/img/jordan4 m.svg">
+          <h4>Jordan 4 Retro Military</h4>
+          <p>$499</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>29</span></td>
+
+              </tr>
+              <tr>
+                <td>Stock</td>
+              </tr>
+            </table>
+          </div>
+          <button>Profile</button>
+        </div>
+      </div>
+
+      <section class="team">
+        <div class="team-list">
+          <h1>Team List
+            <button class="n" onclick="">New +</button>
+          </h1>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Joining Date</th>
+                <th>Shift</th>
+                <th>Salary</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Sam David</td>
+                <td>Production Manager</td>
+                <td>03-24-2000</td>
+                <td>Day</td>
+                <td>1.5cr P.A</td>
+                <td><button>Profile</button></td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Balbina Kherr</td>
+                <td>Assi. Manager</td>
+                <td>03-18-2015</td>
+                <td>Day</td>
+                <td>70la P.A</td>
+                <td><button>Profile</button></td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Badan John</td>
+                <td>Sales Manager</td>
+                <td>12-2-2004</td>
+                <td>Day</td>
+                <td>75 P.A</td>
+                <td><button>Profile</button></td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Sara David</td>
+                <td>Production Manager</td>
+                <td>03-24-2000</td>
+                <td>Day</td>
+                <td>1cr P.A</td>
+                <td><button>Profile</button></td>
+              </tr>
+
+              <tr>
+                <td>04</td>
+                <td>Sara David</td>
+                <td>Production Manager</td>
+                <td>03-24-2000</td>
+                <td>Day</td>
+                <td>1cr P.A</td>
+                <td><button>Profile</button></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
   </div>
-  <div class="context">
-    Products<span>
-      <img class="pr" src="img/pr.svg"> </span>
-
-    <form action="submit-page.html" method="post">
-      <input style="right: 5px;" class="add" type="image" src="img/add.svg" alt="Button Text">
-    </form>
-
-  </div>
-
-
 
 </body>
 
